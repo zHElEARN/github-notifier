@@ -1,6 +1,6 @@
-serverAddr = "ecs.zhelearn.com"
+serverAddr = "YOUR_SERVER_ADDR"
 serverPort = 12803
-auth.token = "vb*4#ZBm9NyGkKw%ofyQhrkiTsBc@@&7f7H9*e$tR37qyU9XQR&Tia3dH^eVaBe4B*!*pJwB#ZD4xNcm%6sgoYL$5$7d2m%xAkTVZTCwMF5lS3lNCoy$B!@EzGvkUvvn"
+auth.token = "YOUR_AUTH_TOKEN"
 
 [[proxies]]
 name = "webhook"
