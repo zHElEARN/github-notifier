@@ -4,7 +4,7 @@ auth.token = "vb*4#ZBm9NyGkKw%ofyQhrkiTsBc@@&7f7H9*e$tR37qyU9XQR&Tia3dH^eVaBe4B*
 
 [[proxies]]
 name = "webhook"
-type = "http"
+type = "tcp"
 localIP = "127.0.0.1"
 localPort = 5000
-customDomains = ["github.zhelearn.com"]
+remotePort = 5000
