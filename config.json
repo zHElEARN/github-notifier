@@ -1,0 +1,20 @@
+{
+    "api_url": "http://localhost:3000/send_group_msg",
+    "groups": [
+        {
+            "group_id": "123456789",
+            "secret": "secret_org_A",
+            "organization": "OrganizationA"
+        },
+        {
+            "group_id": "987654321",
+            "secret": "secret_org_B",
+            "organization": "OrganizationB"
+        },
+        {
+            "group_id": "88888888",
+            "secret": "secret_repo_C",
+            "repository": "User/Repository"
+        }
+    ]
+}
