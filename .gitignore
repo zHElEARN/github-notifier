@@ -170,7 +170,5 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-frpc.exe
-frps.exe
-frpc
-frps
+frpc*
+frps*
