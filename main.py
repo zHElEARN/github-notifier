@@ -29,26 +29,27 @@ def format_message(payload: dict) -> str:
     """
     repository = payload.get("repository", {})
     full_name = repository.get("full_name", "未知仓库")
-    html_url = repository.get("html_url", "无链接")
+    # html_url = repository.get("html_url", "无链接")
 
     ref = payload.get("ref", "未知分支")
     branch = ref.replace("refs/heads/", "") if ref.startswith("refs/heads/") else ref
 
     pusher = payload.get("pusher", {}).get("name", "未知推送者")
 
-    compare = payload.get("compare", "无比较链接")
+    # compare = payload.get("compare", "无比较链接")
 
     commits = payload.get("commits", [])
-    commit_count = len(commits)
+    # commit_count = len(commits)
 
     # 提取提交详情
     commit_details = []
     for commit in commits:
         commit_id = commit.get("id", "")[:7]
         message = commit.get("message", "").strip().replace("\n", " ")
-        url = commit.get("url", "无链接")
+        # url = commit.get("url", "无链接")
         commit_details.append(
-            f"  - 提交ID: {commit_id}\n    消息: {message}\n    链接: {url}"
+            # f"  - 提交ID: {commit_id}\n    消息: {message}\n    链接: {url}"
+            f"  - 提交ID: {commit_id}\n    消息: {message}"
         )
     commit_messages = "\n".join(commit_details) if commit_details else "  无提交详情"
 
@@ -64,13 +65,13 @@ def format_message(payload: dict) -> str:
     message = (
         f"【GitHub Push 事件通知】\n"
         f"仓库: {full_name}\n"
-        f"仓库链接: {html_url}\n"
+        # f"仓库链接: {html_url}\n"
         f"分支: {branch}\n"
         f"推送者: {pusher}\n"
         f"推送时间: {push_time}\n"
-        f"提交数: {commit_count}\n"
+        # f"提交数: {commit_count}\n"
         f"提交详情:\n{commit_messages}\n"
-        f"比较链接: {compare}"
+        # f"比较链接: {compare}"
     )
 
     return message
