@@ -34,7 +34,7 @@
 
 ```json
 {
-  "api_url": "http://localhost:3000/send_group_msg",
+  "api_url": "http://localhost:3000",
   "groups": [
     {
       "group_id": "123456789",
